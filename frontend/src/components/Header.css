@@ -1,0 +1,111 @@
+.header-menu{
+    height: 75px;
+    width: 100%;
+    display: flex; 
+    justify-content: space-evenly;
+    align-items: center;
+}
+.logo img{
+    height: 50px;
+    width: 200px;
+}
+.menu-icon{
+    font-size: 24px;
+    color: rgb(240, 174, 50);
+    display: none;
+    margin-right: 16px;
+    cursor: pointer;
+}
+.cancel-icon{
+    display: none;
+    font-size: 24px;
+    color: rgb(240, 174, 50);
+    cursor: pointer ;
+}
+.main-links{
+    transition: all 1s ease;
+}
+.main-links ul{
+    list-style: none;
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+.main-links ul li{
+    padding: 10px 16px;
+}
+.main-links ul li a{
+    font-size: 16px;
+    color: #6d6868;
+}
+
+.main-links li a:hover{
+    box-sizing: border-box;
+    color: rgb(240, 174, 50);
+    cursor: pointer;
+}
+.logout a{
+    padding: 8px 12px;
+    border: 1px solid rgb(240, 174, 50);
+    border-radius: 6px;
+    font-weight: 600;
+    color: rgb(240, 174, 50);
+}
+.logout a:hover{
+    background: rgb(240, 174, 50);
+    color: #fff;
+}
+.main-links .link-active{
+    color: rgb(240, 174, 50);
+}
+
+@media screen and (max-width: 850px){
+    .user-info{
+        display: block;
+    }
+    .menu-icon{
+        display: block;
+    }
+    .cancel-icon{
+        position: absolute;
+        right: 30px;
+        display: block;
+    }
+    .main-links ul{
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+        margin-top: 15px;
+        margin-left: 20px;
+    }
+    #logout{
+        display: none;
+    }
+    .main-links{
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 55%;
+        height: 100%;
+        z-index: 1;
+        text-align: left;
+        background-color: white;
+        display: block;
+        padding-top: 20px;
+    }
+    #header-menu .main-links.open{
+        top: 0;
+    }
+    
+    #header-menu{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .free-course-btn{
+        width: 55%;
+        margin-top: -35px;
+    }
+}

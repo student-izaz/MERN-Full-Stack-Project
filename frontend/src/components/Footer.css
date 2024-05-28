@@ -1,0 +1,158 @@
+.contact{
+    height: 250px;
+    width: 100%;
+    background: rgba(0, 0, 0,.8);
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+    border-bottom: 12px solid rgba(0, 0, 0, 0.3);
+}
+.advertise{
+    height: 240px;
+    width: 20%;
+}
+.image img{
+    height: 65px;
+    width: 100%;
+    margin-top: 3px;
+}
+.address{
+    height: 220px;
+    width: 25%;
+}
+.address h2{
+    width: 80%;
+    position: relative;
+    color: #fff;
+}
+.address i{
+    color: rgb(240, 174, 50);
+}
+
+.contact_info{
+    height: 250px;
+    width: 25%;
+}
+.contact_info img{
+    height: 50px;
+    width: 250px;
+}
+.contact span{
+    color: #fff;
+}
+.contact_info h3{
+    color: #fff;
+}
+.icon1{
+    margin: 8px;
+}
+.icon1 i{
+    color: rgb(240, 174, 50);
+    transition: transform 0.5s;
+}
+.icon1 i:hover{
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+hr{
+    width: 90px;
+    height: 4px;
+    background: #fff;
+}
+
+@media only screen and (max-width: 1050px){
+    .logo img{
+        height: 40px;
+        width: 150px;
+    }
+    .main-links ul li{
+        padding: 10px;
+    }
+
+    #signin_btn{
+        margin-left: 10px;
+    }
+} 
+@media only screen and (max-width: 968px){
+        .head-top{
+            display: none;
+        }
+    .main-content .main-text h1{
+        font-size: 30px;
+        margin-bottom: 8px;
+    }
+    .animation-text .text{
+        font-size: 24px;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .contanier{
+        width: 100%;
+    }
+    #header-menu .logo{
+        margin-left: 10px;
+    }
+    .main-links{
+        display: block;
+    }
+    .container{
+        width: 100%;
+    }
+    .main-text{
+        flex-basis: 100%;
+        padding: 20px 30px;
+    }
+    .main-img{
+        display: none;
+    }
+    .training{
+        display: none;
+    }
+    .footer{
+        font-size: 8.2px;
+    }
+    .free-course-btn{
+        width: 30%;
+        margin-top: -35px;
+    }
+}
+@media screen and (max-width: 450px){
+    .main-text{
+        font-size: 12px;
+    }
+    .free-course-btn{
+        width: 45%;
+        margin-top: -35px;
+    }
+    .main-links{
+        display: none;
+    }
+}
+@media screen and (max-width: 850px){
+    .contact{
+        width: 100%;
+        height: 800px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .advertise{
+        width: 90%;
+    }
+    .advertise img{
+        width: 230px;
+        height: 60px;
+    }
+    .address{
+        width: 100%;
+    }
+    .contact_info{
+        width: 100%;
+    }
+    .contact_info img{
+        width: 150px;
+        height: 40px;
+    }
+    
+}

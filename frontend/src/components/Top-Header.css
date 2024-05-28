@@ -1,0 +1,17 @@
+.head-top{
+    height: 25px;
+    width: 100%;
+    color: #6d6868;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 100px 0px  70px;
+}
+.social-icon i{
+    margin-left: 4px;
+}
+.social-icon i:hover{
+    color: rgb(240, 174, 50);
+    cursor: pointer;
+}

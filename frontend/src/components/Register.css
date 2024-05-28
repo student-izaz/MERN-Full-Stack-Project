@@ -1,0 +1,95 @@
+.registration-area{
+    width: 100%;
+    height: 720px;
+    background-color: rgba(0, 0, 0, .1);
+    display: flex;
+}
+.Registration_form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 30px;
+    padding-left: 50px;
+    flex-basis: 50%; 
+    position: relative;
+}
+.register-form{
+    width: 100%;
+    height: 550px;
+    background: #fff;
+    border-radius: 5px;
+    padding: 30px;
+    margin-top: 30px;
+}
+.register-form i{
+    position: absolute;
+    width: 40px;
+    height: 42px;
+    background: rgb(240, 174, 50);
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(240, 174, 50);
+    font-size: 20px;
+    color: #fff;
+    border-radius: 6px 0 0 6px;
+}
+.form-heading h1{
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+.register-form .input,select{
+    width: 100%;
+    padding: 10px;
+    padding-left: 50px;
+    font-size: 16px;
+    border: 2px solid #9b9797;
+    border-radius: 6px;
+    outline: none;
+    margin-bottom: 15px;
+}
+.Reg-btn{
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(240, 174, 50);
+    color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+}
+.Reg-btn:hover{
+    background-color: rgb(245, 189, 84);
+    cursor: pointer;
+}
+
+
+.benefits-head h1{
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+.training-benefits{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 30px;
+    padding-right: 50px;
+    flex-basis: 50%;
+}
+.list-benefits{
+    width: 650px;
+    height: 300px;
+    background-color: #fff;
+    margin-left: 60px;
+    margin-top: 30px;
+    padding: 20px;
+}
+.list-benefits p{
+    text-align: left;
+    font-size: 16px;
+    color: #424141;
+    line-height: 24px;
+    pointer-events: none;
+}
