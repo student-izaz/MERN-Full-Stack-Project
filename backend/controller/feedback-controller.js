@@ -10,4 +10,15 @@ const feedback = async (req, res) => {
     }    
 };
 
-module.exports = {feedback};
+const getfeedback = async (req, res) => {
+    try {
+        const feedbacks = await feedbackModel.find();
+        res.status(200).json(feedbacks)   
+    } catch (error) {
+        res.status(400).json({ msg: error });
+    }    
+};
+
+
+
+module.exports =  { feedback, getfeedback };

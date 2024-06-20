@@ -310,6 +310,9 @@
     height: 500px;
     width: 100%;
     padding: 30px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 #testimonial_head{
     width: 100%;
@@ -322,14 +325,19 @@
     padding: 10px 0 10px 0;
 }
 #reviews{
-    width: 100%;
+    width: 50%;
+    overflow-x: scroll;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    background-color: antiquewhite;
+}
+#reviews::-webkit-scrollbar {
+    display: none;
 }
 .review_box{
     width: 100%;
+    overflow: hidden;
     padding: 20px 10px 10px 10px;
     display: flex;
     flex-direction: column;

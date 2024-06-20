@@ -40,7 +40,7 @@ function Feedback() {
     }
     console.log(response);
     } catch (error) {
-      console.log('contact', error)
+      console.log('feedback', error)
     }
     
   };

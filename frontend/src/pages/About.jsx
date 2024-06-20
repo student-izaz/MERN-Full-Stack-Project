@@ -1,5 +1,6 @@
 import React from 'react';
 import './About.css';
+import { Link } from 'react-router-dom';
 
 function About() {
   return (
@@ -15,7 +16,7 @@ function About() {
                 <h2>Welcome to the Techpile, just here some like word to describe our work scope.</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae eligendi autem porro optio cum fugit deleniti! Optio dolorum impedit assumenda fuga illo magnam quidem nobis nisi vero dicta, quasi repellat ea officia sed cumque? Minima vero maiores beatae. Temporibus at dolore vero, cupiditate ab numquam delectus libero sed iusto consequatur deleniti. Blanditiis expedita!<br/><br/>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae eligendi autem porro optio cum fugit deleniti! Optio dolorum impedit assumenda fuga illo magnam quidem nobis nisi vero dicta, quasi repellat ea officia sed cumque? Minima vero maiores beatae. Temporibus at dolore vero, cupiditate ab numquam delectus libero sed iusto consequatur deleniti. Blanditiis expedita!</p>
-                <a href="Contact.html" id="contact-btn">Contact Us</a>
+                <Link to="/contact" id="contact-btn">Contact Us</Link>
             </div>
         </div>
     </div>

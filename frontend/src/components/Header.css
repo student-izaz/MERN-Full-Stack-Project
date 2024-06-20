@@ -46,14 +46,14 @@
     color: rgb(240, 174, 50);
     cursor: pointer;
 }
-.logout a{
+.login a{
     padding: 8px 12px;
     border: 1px solid rgb(240, 174, 50);
     border-radius: 6px;
     font-weight: 600;
     color: rgb(240, 174, 50);
 }
-.logout a:hover{
+.login a:hover{
     background: rgb(240, 174, 50);
     color: #fff;
 }

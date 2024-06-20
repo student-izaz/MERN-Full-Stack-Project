@@ -1,14 +1,18 @@
-.contact{
+.footer-area{
     height: 250px;
     width: 100%;
     background: rgba(0, 0, 0,.8);
-    display: flex;
-    justify-content: space-evenly;
-    padding: 20px;
+    padding: 20px 8%;
     border-bottom: 12px solid rgba(0, 0, 0, 0.3);
 }
+.footer-content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 .advertise{
-    height: 240px;
+    height: 100%;
     width: 20%;
 }
 .image img{
@@ -17,7 +21,7 @@
     margin-top: 3px;
 }
 .address{
-    height: 220px;
+    height: 100%;
     width: 25%;
 }
 .address h2{
@@ -30,14 +34,14 @@
 }
 
 .contact_info{
-    height: 250px;
+    height: 100%;
     width: 25%;
 }
 .contact_info img{
     height: 50px;
     width: 250px;
 }
-.contact span{
+.footer-area span{
     color: #fff;
 }
 .contact_info h3{

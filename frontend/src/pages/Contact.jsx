@@ -31,7 +31,6 @@ function Contact() {
       body: JSON.stringify(contact),
     });
 
-    // const res_data = await response.json();
 
     if (response.ok) {
       setContact({ name: "", phone_no: "", email: "", message: "" });
@@ -149,9 +148,9 @@ function Contact() {
             width="1500"
             height="350"
             style={{ border: "0", marginBottom: "25px" }}
-            allowfullscreen=""
+            allowFullScreen=""
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
+            referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
       </div>

@@ -1,4 +1,3 @@
-import React from 'react';
 import './Top-Header.css';
 
 function TopHeader() {

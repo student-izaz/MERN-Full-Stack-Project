@@ -1,17 +1,9 @@
 const bcrypt = require("bcrypt");
 const userModel = require("../model/user-model");
-const jwt = require("jsonwebtoken");
 
-const home = async (req, res) => {
-  try {
-    res.status(200).send("Home");
-  } catch (error) {
-    res.status(400).send({ msg: "found an error" });
-  }
-};
 
 // User Registeration Route
-const register = async (req, res) => {
+const createAccount = async (req, res) => {
   const { name, email, phone_no, password, isAdmin } = req.body;
   try {
     const userExit = await userModel.findOne({ email });
@@ -28,7 +20,13 @@ const register = async (req, res) => {
           password: hash,
           isAdmin,
         });
-        res.status(200).json({ msg: userCreated });
+        res
+          .status(200)
+          .json({
+            msg: "Account Created Successfully!",
+            token: await userCreated.generateToken(),
+            userId: userCreated._id.toString(),
+          });
       });
     });
   } catch (error) {
@@ -40,23 +38,26 @@ const register = async (req, res) => {
 const login = async (req, res) => {
   try {
     const { email, password } = req.body;
-    const user = await userModel.findOne({ email });
+    const userExit = await userModel.findOne({ email });
 
-    if (!user) {
+    if (!userExit) {
       return res.status(400).json({ msg: "Invalid Credential..." });
     }
 
-    const correctCredential = await bcrypt.compare(password, user.password);
+    const correctCredential = await bcrypt.compare(password, userExit.password);
 
     if (correctCredential) {
-      res.status(200).json({ msg: "Login Successfully..." });
-    }else{
+      res
+        .status(200)
+        .json({ msg: "Login Successfully...", 
+        token: await userExit.generateToken(),
+        userId: userExit._id.toString(), });
+    } else {
       res.status(400).json({ msg: "Invalid Credential..." });
     }
   } catch (error) {
-    res.status(500).json({msg: "Internal server error..."})
+    res.status(500).json({ msg: "Internal server error..." });
   }
 };
 
-
-module.exports = { home, register, login };
+module.exports = { createAccount, login };
