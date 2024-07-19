@@ -50,7 +50,7 @@ function Feedback() {
       <div className="feedback-area">
         <div className="feedback-head">
           <h1>
-            Your Valuable{" "}
+            Your Valuable
             <span style={{ color: "rgb(241, 174, 50)" }}>Feedback</span>
           </h1>
           <p>We appreceiate your valuable feedback. Give us your feedback by filling the form bellow:

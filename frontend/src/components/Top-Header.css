@@ -5,8 +5,8 @@
     background-color: #ccc;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    padding: 0 100px 0px  70px;
+    justify-content: space-between;
+    padding: 0 8%;
 }
 .social-icon i{
     margin-left: 4px;

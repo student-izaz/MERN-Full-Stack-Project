@@ -3,7 +3,7 @@ import './Courses.css';
 
 function Courses() {
   return (
-    <div>
+    <>
       <div className="course_section flex">
       <div className="about_courses flex_col">
         <div className="course_head">
@@ -95,7 +95,7 @@ function Courses() {
       </div>
     </div>
 
-    </div>
+    </>
   )
 }
 

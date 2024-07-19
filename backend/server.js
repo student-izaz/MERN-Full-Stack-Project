@@ -39,4 +39,4 @@ connectDB().then(() => {
   app.listen(PORT, () => {
     console.log(`app listen at port no ${PORT}`);
   });
-});
+}); 

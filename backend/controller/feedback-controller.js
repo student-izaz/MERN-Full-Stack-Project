@@ -19,6 +19,4 @@ const getfeedback = async (req, res) => {
     }    
 };
 
-
-
 module.exports =  { feedback, getfeedback };

@@ -53,6 +53,7 @@ function Main() {
         </div>
       </div>
 
+      {/* Training Section */}
       <div className="training">
         <div className="training_head">
           <h1>
@@ -216,7 +217,7 @@ function Main() {
       {/*----------------- LEARNING APP -------------------*/}
       <div className="learning_app">
         <div className="cover">
-          <div className="text">
+          <div className="text1">
             <h1>Also available on Google Play Store</h1>
             <h2>Techpile Learning App.</h2>
             <br />

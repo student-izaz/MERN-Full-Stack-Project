@@ -45,13 +45,15 @@ function Header() {
           <li>
             <Link to="/feedback" className={`${selectedTab === "Feedback" && "link-active"}`} onClick={()=>{setSelectedTab("Feedback")}}>Feedback</Link>
           </li>
-          <li>
-            <Link to="/admin">Admin</Link>
-          </li>
         </ul>
       </div>
-      <div className="login">
-        <Link to="/login">Login</Link>
+      <div className="auth-btn">
+        <div className="login-btn">
+          <Link to="/login">Login</Link>
+        </div>
+        <div className="signup-btn">
+          <Link to="/signup">Signup</Link>
+        </div>
       </div>
     </section>
   );

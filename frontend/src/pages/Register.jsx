@@ -25,8 +25,8 @@ function Register() {
   };
 
   const submitRegData = async (e) => {
+    e.preventDefault();
     try {
-        e.preventDefault();
       const response = await fetch(`http://localhost:5000/api/form/registration`, {
         method: "POST",
         headers: {

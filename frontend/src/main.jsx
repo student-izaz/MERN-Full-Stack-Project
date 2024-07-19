@@ -12,7 +12,6 @@ import Error from "./pages/Error.jsx";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Login from "./pages/Login.jsx";
-import Admin from "./pages/Admin.jsx";
 import { AuthProvider } from "./store/auth.jsx";
 
 const router = createBrowserRouter([
@@ -47,10 +46,6 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login/>,
-      },
-      {
-        path: "/admin",
-        element: <Admin/>,
       },
       {
         path: "*",
