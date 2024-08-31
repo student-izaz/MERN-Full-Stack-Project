@@ -368,7 +368,7 @@
 .circle{
     margin-top: 7%;
 }
-.dot{
+.cur_dot{
     height: 10px;
     width: 10px;
     margin: 10px;
@@ -395,7 +395,7 @@
     color: rgb(240, 174, 50);
 }
 .active{
-    background: rgb(240, 174, 50);
+    background-color: rgb(240, 174, 50);
     border-color: rgb(240, 174, 50);
 }
 

@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 
-const URI = "mongodb://localhost:27017/tp_database";
+const URL = "mongodb://localhost:27017/tp_database";
 
 const connectDB = async () => {
     try {
-        await mongoose.connect(URI);
+        await mongoose.connect(URL);
         console.log('connect to database successfully...')
     } catch (error) {
         console.error('database connection failed...', error);

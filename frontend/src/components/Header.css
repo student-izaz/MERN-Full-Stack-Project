@@ -60,11 +60,18 @@
 .login-btn a{
     color: rgb(240, 174, 50);
 }
+.logout-btn a{
+    color: rgb(240, 174, 50);
+}
 .signup-btn a{
     background-color: rgb(240, 174, 50);
     color: white;
 }
 .login-btn a:hover{
+    background: rgb(240, 174, 50);
+    color: #fff;
+}
+.logout-btn a:hover{
     background: rgb(240, 174, 50);
     color: #fff;
 }

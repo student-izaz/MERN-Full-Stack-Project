@@ -1,0 +1,37 @@
+main{
+    width: calc(100% - 18%);
+    height: 100%;
+    padding: 20px;
+    margin-left: 18%;
+    background-color: #eceff1;
+    position: relative;
+    top: 80px;
+}
+.admin-dashboard .row .col {
+    height: 150px;
+    width: 285px;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+.admin-dashboard .row .col-1{
+    background-color: #6a73fa;
+}
+.admin-dashboard .row .col-2{
+    background-color: #FFAA16;
+}
+.admin-dashboard .row .col-3{
+    background-color: #673BB7;
+}
+.admin-dashboard .row .col-4{
+    background-color: #FF1616;
+}
+.row-1 .col .col-icon i{
+    padding: 18px;
+    font-size: 20px;
+    background-color: aliceblue;
+    border-radius: 50%;
+    color: rgb(109, 107, 107);
+}
+
+

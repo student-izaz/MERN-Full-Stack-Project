@@ -1,14 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Contact.css";
 import { toast } from "react-toastify";
+import { useAuth } from "../store/auth";
 
 function Contact() {
+  const {user} = useAuth();
+  // console.log(user)
+
   const [contact, setContact] = useState({
-    name: "",
-    phone_no: "",
-    email: "",
+    name: user.name,
+    phone_no: user.phone_no,
+    email: user.email,
     message: "",
   });
+
+  // const [user, setUser] = useState();
 
   const handleInputs = (e) => {
     const name = e.target.name;
@@ -19,6 +25,28 @@ function Contact() {
       [name]: value,
     }));
   };
+
+  // const getUserData = async () => {
+  //   try {
+  //     const userData = await fetch(`http://localhost:5000/api/auth/user`, {
+  //       method: 'GET',
+  //       headers: {
+  //         "Authorization": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjRiODg4MmE1MzJjOTQzNTI3YmFlNDQiLCJlbWFpbCI6Iml6YXphaG1lZEBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3MjIxNjQ2MTQsImV4cCI6MTcyNDc1NjYxNH0.HmqakRQA-c6Kt7CdeJyl_w_GQiwjNiN5nC3ZHYPSQ3Y",
+  //       },
+  //     })
+  //     const res = await userData.json();
+  //     const data = res.msg;
+  //     // console.log(data)
+  //     setUser(data);
+  //     // console.log(user);
+  //   } catch (error) {
+  //     console.log('user error',error);
+  //   }
+  // }
+
+  // useEffect(() => {
+  //   getUserData();
+  // }, []);
 
   const onSubmitData = async (e) => {
     try {

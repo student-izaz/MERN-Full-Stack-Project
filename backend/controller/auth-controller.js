@@ -2,7 +2,7 @@ const bcrypt = require("bcrypt");
 const userModel = require("../model/user-model");
 
 
-// User Registeration Route
+// User Create Account Route
 const createAccount = async (req, res) => {
   const { name, email, phone_no, password, isAdmin } = req.body;
   try {
@@ -52,12 +52,26 @@ const login = async (req, res) => {
         .json({ msg: "Login Successfully...", 
         token: await userExit.generateToken(),
         userId: userExit._id.toString(), });
-    } else {
+    } 
+    else {
       res.status(400).json({ msg: "Invalid Credential..." });
     }
+    console.log(token)
+
   } catch (error) {
     res.status(500).json({ msg: "Internal server error..." });
   }
 };
 
-module.exports = { createAccount, login };
+// To send user data - user logic 
+
+const user = async (req, res) => {
+  try {
+    const userData = req.user;
+    return res.status(200).json(userData);
+  } catch (error) {
+    console.log('Error from the user route', error)
+  }
+}
+
+module.exports = { createAccount, login, user };

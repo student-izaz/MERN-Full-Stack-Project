@@ -256,11 +256,11 @@ function Main() {
             <i className="fa-solid fa-angle-right"></i>
           </div>
           <div className="circle">
-            <div className="dot active"></div>
-            <div className="dot"></div>
-            <div className="dot"></div>
-            <div className="dot"></div>
-            <div className="dot"></div>
+            <div className="cur_dot active"></div>
+            <div className="cur_dot"></div>
+            <div className="cur_dot"></div>
+            <div className="cur_dot"></div>
+            <div className="cur_dot"></div>
           </div>
         </div>
     </>

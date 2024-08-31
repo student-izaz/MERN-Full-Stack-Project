@@ -1,0 +1,27 @@
+nav{
+    width: 18%;
+    height: 100vh;
+    padding: 40px 0;
+    position: fixed;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    top: 80px;
+    z-index: 1;
+}
+nav .admin-main-links{
+    width: 100%;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+}
+nav .admin-main-links p{
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+nav .admin-main-links li{
+    width: 100%;
+    font-size: 15px;
+}

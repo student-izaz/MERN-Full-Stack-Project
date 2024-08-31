@@ -12,8 +12,8 @@ function App() {
       <TopHeader/>
       <Header/>
       <Outlet/>
-      <Footer/>
-      <SubFooter/>
+      {/* <Footer/> */}
+      {/* <SubFooter/> */}
     </>
   )
 }

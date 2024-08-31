@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import './Header.css';
+import "./Header.css";
 import { Link } from "react-router-dom";
+import { useAuth } from "../store/auth";
 
 function Header() {
+  const { isLoggedIn } = useAuth();
 
   const [selectedTab, setSelectedTab] = useState("Home");
 
@@ -20,40 +22,99 @@ function Header() {
             <i className="fa-solid fa-xmark"></i>
           </div>
           <li>
-            <Link to='/' className={`${selectedTab === "Home" && "link-active"}`} onClick={()=>{setSelectedTab("Home")}}>
+            <Link
+              to="/"
+              className={`${selectedTab === "Home" && "link-active"}`}
+              onClick={() => {
+                setSelectedTab("Home");
+              }}
+            >
               Home
             </Link>
           </li>
           <li>
-            <Link to="/about" className={`${selectedTab === "About" && "link-active"}`} onClick={()=>{setSelectedTab("About")}}>About Us</Link>
+            <Link
+              to="/about"
+              className={`${selectedTab === "About" && "link-active"}`}
+              onClick={() => {
+                setSelectedTab("About");
+              }}
+            >
+              About Us
+            </Link>
           </li>
           <li>
-            <Link to="/registration" className={`${selectedTab === "Registration" && "link-active"}`} onClick={()=>{setSelectedTab("Registration")}}>Registration</Link>
+            <Link
+              to="/registration"
+              className={`${selectedTab === "Registration" && "link-active"}`}
+              onClick={() => {
+                setSelectedTab("Registration");
+              }}
+            >
+              Registration
+            </Link>
           </li>
           <li>
             <Link to="#">Training</Link>
           </li>
           <li>
-            <Link to="/course" className={`${selectedTab === "Course" && "link-active"}`} onClick={()=>{setSelectedTab("Course")}}>Course</Link>
+            <Link
+              to="/course"
+              className={`${selectedTab === "Course" && "link-active"}`}
+              onClick={() => {
+                setSelectedTab("Course");
+              }}
+            >
+              Course
+            </Link>
           </li>
           <li>
-            <Link to="/contact" className={`${selectedTab === "Contact" && "link-active"}`} onClick={()=>{setSelectedTab("Contact")}}>Contact</Link>
+            <Link
+              to="/contact"
+              className={`${selectedTab === "Contact" && "link-active"}`}
+              onClick={() => {
+                setSelectedTab("Contact");
+              }}
+            >
+              Contact
+            </Link>
           </li>
           <li>
             <Link to="#">Gallery</Link>
           </li>
           <li>
-            <Link to="/feedback" className={`${selectedTab === "Feedback" && "link-active"}`} onClick={()=>{setSelectedTab("Feedback")}}>Feedback</Link>
+            <Link
+              to="/feedback"
+              className={`${selectedTab === "Feedback" && "link-active"}`}
+              onClick={() => {
+                setSelectedTab("Feedback");
+              }}
+            >
+              Feedback
+            </Link>
           </li>
         </ul>
       </div>
+
       <div className="auth-btn">
-        <div className="login-btn">
-          <Link to="/login">Login</Link>
-        </div>
-        <div className="signup-btn">
+        {isLoggedIn ? (
+          <div className="logout-btn">
+            <Link to="/logout">Logout</Link>
+          </div>
+        ) : (
+          <>
+          <div className="login-btn">
+            <Link to="/login">Login</Link>
+          </div>
+          </>
+        )}
+
+        {!isLoggedIn ? <div className="signup-btn">
           <Link to="/signup">Signup</Link>
-        </div>
+        </div> : <div className="signup-btn">
+          <Link to="/admin">Admin</Link>
+        </div>}
+        
       </div>
     </section>
   );

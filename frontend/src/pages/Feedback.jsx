@@ -1,10 +1,13 @@
 import { useState } from "react";
 import "./Feedback.css";
 import { toast } from "react-toastify";
+import { useAuth } from "../store/auth";
 
 function Feedback() {
+  const {user} = useAuth(); 
+
   const [feedback, setFeedback] = useState({
-    name: "",
+    name: user.name,
     image: "",
     from: "",
     feedback: "",
